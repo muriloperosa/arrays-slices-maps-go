@@ -1,12 +1,19 @@
-package main
+package lists
 
 import "fmt"
 
 func main() {
+
+	// exercises()
+
 	prices := []float64{10.99, 8.99}
 	fmt.Println(prices, prices[1], prices[0:1])
 
-	prices = append(prices, 12.88)
+	prices = append(prices, 12.88, 20.99)
+	fmt.Println(prices)
+
+	discountPrices := []float64{6.99, 3.99}
+	prices = append(prices, discountPrices...)
 	fmt.Println(prices)
 }
 
